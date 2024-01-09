@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버앱 rotate 이슈</title>
+    <link rel="stylesheet" href="../../commonInc/commonStyle.css">
+    <link rel="stylesheet" href="rotateCheck.css">
+</head>
+<body>
+    <div class="wrap">
+        <p>네이버 앱에서 keyframes > rotate로 설정하면 작동 안하는 이슈 확인</p>
+        <p> - 2024년 01월 09일 작동 안하는 것 체크</p>
+        <div class="inner">
+            <div>
+                <div class="animation"></div>
+                <p>@keyframes ></p>
+                <p><b>rotate</b>로 설정</p>
+            </div>
+            <div>
+                <div class="animation2"></div>
+                <p>@keyframes ></p>
+                <p><b>transform : rotate</b>로 설정</p>
+            </div>
+        </div>
+    </div>
+    <script src="../../commonInc/commonScript.js"></script>
+</body>
+</html>
