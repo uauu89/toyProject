@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moveModal</title>
+    <link rel="stylesheet" href="../../commonInc/commonStyle.css">
+    <link rel="stylesheet" href="moveModal.css">
+</head>
+<body>
+    
+    <div class="wrap">
+        <button type="button" class="btn_modalOpen">모달 오픈</button>
+        <div class="modalWrap">
+            <div class="modalWindow">
+                <div class="header">
+                    <h2>모달 제목</h2>
+                </div>
+                <button type="button" class="btn_modalClose">X</button>
+            </div>
+            <div class="modalBg"></div>
+            <!-- .modalWrap에 addEventListener를 지정할 경우 버블링 발생해서 bg를 따로 지정 -->
+        </div>
+    </div>
+
+    <script src="../../commonInc/commonScript.js"></script>
+    <script src="moveModal.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+.wrap{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+    position: relative;
+}
+
+.btn_modalOpen{
+    padding: 5px;
+    border: 2px solid #999;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+.btn_modalOpen:hover{
+    text-decoration: underline;
+    background-color: #999;
+    color: #fff;
+    border-color: #333;
+}
+
+.btn_modalClose{
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #999;
+    padding: 5px;
+}
+
+.btn_modalClose:hover{
+    color: #333;
+}
+
+.modalWrap{
+    position: relative;
+    display: none;
+}
+.modalWrap.show{
+    display: block;
+}
+.modalWindow{
+    background-color: #fff;
+    width: 360px;
+    height: 240px;
+    border-radius: 10px;
+    position: fixed;
+    overflow: hidden;
+}
+.modalBg{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.header{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #333;
+    position: relative;
+}
+
+.header h2{
+    user-select: none;
+    cursor: move;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+.header h2:hover{
+    background-color: #ddd;
+}
