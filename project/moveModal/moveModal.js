@@ -13,9 +13,11 @@ let modalWidth = modal.offsetWidth,
 handle.addEventListener("mousedown", e=>{
     modalSwitch = true;
     
-    marginX = e.pageX - modal.offsetLeft;
-    marginY = e.pageY - modal.offsetTop;
+    // marginX = e.pageX - modal.offsetLeft;
+    // marginY = e.pageY - modal.offsetTop;
 
+    marginX = e.offsetX;
+    marginY = e.offsetY;
     // 모달의 position 기준 (0, 0)에서 마우스 클릭 위치를 보정하기 위한 변수
 })
 
