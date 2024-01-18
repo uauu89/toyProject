@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autoSlideBanner</title>
+    <link rel="stylesheet" href="autoSlideBanner.css">
+
+</head>
+<body>
+
+    <div class="bannerWrap justifyCenter">
+        <div class="bannerFrame">
+            <div class="bannerListWrap transition">
+
+                <ul class="slideList origin">
+                    <li><img src="./img/slide01.jpg" alt=""></li>
+                    <li><img src="./img/slide02.jpg" alt=""></li>
+                    <li><img src="./img/slide03.jpg" alt=""></li>
+                    <li><img src="./img/slide04.jpg" alt=""></li>
+                </ul>
+
+                <ul class="slideList slideClone cloneBefore">
+                    <li><img src="./img/slide01.jpg" alt=""></li>
+                    <li><img src="./img/slide02.jpg" alt=""></li>
+                    <li><img src="./img/slide03.jpg" alt=""></li>
+                    <li><img src="./img/slide04.jpg" alt=""></li>
+                </ul>
+
+                <ul class="slideList slideClone cloneAfter">
+                    <li><img src="./img/slide01.jpg" alt=""></li>
+                    <li><img src="./img/slide02.jpg" alt=""></li>
+                    <li><img src="./img/slide03.jpg" alt=""></li>
+                    <li><img src="./img/slide04.jpg" alt=""></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="uiGroup verFlex">
+        <p>justify-content : </p>
+        <button type="button" class="btn verFlex valStart" value="justifyStart">start</button>
+        <button type="button" class="btn verFlex valCenter" value="justifyCenter">center</button>
+        <button type="button" class="btn verFlex valEnd" value="justifyEnd">end</button>
+    </div>
+    <div class="uiGroup verFlex">
+        <p>margin-left : </p>
+        <input type="range" class="range verFlex">
+    </div>
+
+    <hr style="margin: 40px 0">
+    
+    <div class="bannerGridWrap responseTemplate">
+        <div class="bannerGridFrame" style="min-height: 50px; max-height: 120px;">
+   
+            <div class="bannerGridListWrap transition">
+
+                <ul class="gridSlideList origin">
+                    <li><img src="./img/slide01.jpg" alt=""></li>
+                    <li><img src="./img/slide02.jpg" alt=""></li>
+                    <li><img src="./img/slide03.jpg" alt=""></li>
+                    <li><img src="./img/slide04.jpg" alt=""></li>
+                </ul>
+
+                <ul class="gridSlideList slideClone cloneBefore">
+                    <li><img src="./img/slide01.jpg" alt=""></li>
+                    <li><img src="./img/slide02.jpg" alt=""></li>
+                    <li><img src="./img/slide03.jpg" alt=""></li>
+                    <li><img src="./img/slide04.jpg" alt=""></li>
+                </ul>
+
+                <ul class="gridSlideList slideClone cloneAfter">
+                    <li><img src="./img/slide01.jpg" alt=""></li>
+                    <li><img src="./img/slide02.jpg" alt=""></li>
+                    <li><img src="./img/slide03.jpg" alt=""></li>
+                    <li><img src="./img/slide04.jpg" alt=""></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="uiGroup verGrid">
+        <p>min-height : </p>
+        <span style="vertical-align: middle;">
+            <input type="number" class="number minHeight verGrid" value="50"> px
+            <button type="button" class="btn minUnset">unset</button>
+        </span>
+    </div>
+    <div class="uiGroup verGrid">
+        <p>max-height : </p>
+        <span>
+            <input type="number" class="number maxHeight verGrid" value="120"> px
+            <button type="button" class="btn maxUnset">unset</button>
+        </span>
+    </div>
+    <div class="uiGroup verGrid">
+        <p>template 변경 여부 : </p>
+        <button type="button" class="btn valRes">변경</button>
+        <button type="button" class="btn valFix">고정</button>
+    </div>
+    
+    <ul>
+        <li>자동 슬라이드 배너를 보면 스크립트에 따라서 화면크기가 바뀜에 따라서 위치나 크기가 깨지는 경우가 종종 있음</li>
+        <li>슬라이드 위치 기준을 가운데로 두고 화면 리사이즈에 따라 좌우가 짤리게 하면 간단하게 해결 가능해보임.</li>
+        <li>더 나아가 항상 화면에 나타나는 배너 개수도 유지하도록 만들어보려 했으나 실패.</li>
+        <li>미디어쿼리로 grid column의 개수를 변경할 때, transition을 사용하지 않으면 문제가 없겠으나 transition효과를 주려고 하면 0fr을 추가해줘야 하므로 뭔가 뭔가..</li>
+        <li>전임자가 만든 배너를 보고 개선을 위해 만들었으나 솔직히 만들다보니 무슨 목적으로 뭘 만들려고 했는지도 까먹음</li>
+    </ul>
+
+    <script src="autoSlideBanner.js"></script>
+</body>
+</html>
